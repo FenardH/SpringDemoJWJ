@@ -46,6 +46,12 @@
 		</dependency>
 	</dependencies>
 
+	<dependency>
+		<groupId>net.sourceforge.nekohtml</groupId>
+		<artifactId>nekohtml</artifactId>
+		<version>1.9.22</version>
+	</dependency>
+
 	<build>
 		<plugins>
 			<plugin>
