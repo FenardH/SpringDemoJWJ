@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculatrice</title>
+  <link rel="stylesheet" href="/css/calculatrice.css">
+</head>
+<!-- create table -->
+
+<body>
+<table id="calcu">
+  <tr>
+    <td colspan="3"><input type="text" id="result" th:onclick="*{input}"></td>
+    <!-- clr() function will call clr to clear all value -->
+    <td><input type="button" value="c" onclick="clr()" /> </td>
+  </tr>
+  <tr>
+    <!-- create button and assign value to each button -->
+    <!-- dis("1") will call function dis to display value -->
+    <td><input type="button" value="1" onclick="*{input}"
+               onkeydown="myFunction(event)"> </td>
+    <td><input type="button" value="2" onclick="*{input}"
+               onkeydown="myFunction(event)"> </td>
+    <td><input type="button" value="3" onclick="*{input}"
+               onkeydown="myFunction(event)"> </td>
+    <td><input type="button" value="/" onclick="*{input}"
+               onkeydown="myFunction(event)"> </td>
+  </tr>
+  <tr>
+    <td><input type="button" value="4" onclick="*{input}"
+               onkeydown="myFunction(event)"> </td>
+    <td><input type="button" value="5" onclick="*{input}"
+               onkeydown="myFunction(event)"> </td>
+    <td><input type="button" value="6" onclick="*{input}"
+               onkeydown="myFunction(event)"> </td>
+    <td><input type="button" value="*" onclick="*{input}"
+               onkeydown="myFunction(event)"> </td>
+  </tr>
+  <tr>
+    <td><input type="button" value="7" onclick="dis('7')"
+               onkeydown="myFunction(event)"> </td>
+    <td><input type="button" value="8" onclick="dis('8')"
+               onkeydown="myFunction(event)"> </td>
+    <td><input type="button" value="9" onclick="dis('9')"
+               onkeydown="myFunction(event)"> </td>
+    <td><input type="button" value="-" onclick="dis('-')"
+               onkeydown="myFunction(event)"> </td>
+  </tr>
+  <tr>
+    <td><input type="button" value="0" onclick="dis('0')"
+               onkeydown="myFunction(event)"> </td>
+    <td><input type="button" value="%" onclick="dis('%')"
+               onkeydown="myFunction(event)"> </td>
+    <!-- solve function call function solve to evaluate value -->
+    <td><input type="button" value="=" onclick="solve()"> </td>
+
+    <td><input type="button" value="+" onclick="dis('+')"
+               onkeydown="myFunction(event)"> </td>
+  </tr>
+</table>
+
+<!--<script>-->
+<!--        // Function that display value-->
+<!--        function dis(val) {-->
+<!--            document.getElementById("result").value += val-->
+<!--        }-->
+
+<!--        function myFunction(event) {-->
+<!--            if (event.key == '0' || event.key == '1'-->
+<!--                || event.key == '2' || event.key == '3'-->
+<!--                || event.key == '4' || event.key == '5'-->
+<!--                || event.key == '6' || event.key == '7'-->
+<!--                || event.key == '8' || event.key == '9'-->
+<!--                || event.key == '+' || event.key == '-'-->
+<!--                || event.key == '*' || event.key == '/')-->
+<!--                document.getElementById("result").value += event.key;-->
+<!--        }-->
+
+<!--        var cal = document.getElementById("calcu");-->
+<!--        cal.onkeyup = function (event) {-->
+<!--            if (event.keyCode === 13) {-->
+<!--                console.log("Enter");-->
+<!--                let x = document.getElementById("result").value-->
+<!--                console.log(x);-->
+<!--                solve();-->
+<!--            }-->
+<!--        }-->
+
+<!--        // Function that evaluates the digit and return result-->
+<!--        function solve() {-->
+<!--            let x = document.getElementById("result").value-->
+<!--            let y = math.evaluate(x)-->
+<!--            document.getElementById("result").value = y-->
+<!--        }-->
+
+<!--        // Function that clear the display-->
+<!--        function clr() {-->
+<!--            document.getElementById("result").value = ""-->
+<!--        }-->
+    </script>
+</body>
+
+</html>
